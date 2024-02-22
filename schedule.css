@@ -1,18 +1,11 @@
-.blue {
-    background-color: rgb(21, 93, 248, 0.3);
-    background-size: 50% 50%;
-    background-repeat: no-repeat;
-  }
+.appt_table {
+  position: absolute;
+  top: 0%;
 
-.free{
-  background-color: rgba(255, 255, 255, 0.3);
-  height: var(--porcentage);
 }
 
-.cont{
-  background-color: rgb(21, 93, 248, 0.3);
-  height: var(--porcentage);
-  
+.dayCol {
+  height: 100%;
 }
 
 

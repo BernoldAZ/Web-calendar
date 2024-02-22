@@ -10,8 +10,6 @@
     My Schedule
 </h1>
 
-<!-- A button to open the popup form -->
-<button class="open-button" onclick="openForm()">Add appoiment</button>
 <!-- The form -->
 <div class="form-popup" id="myForm">
     <form  class="form-container">
@@ -21,191 +19,181 @@
         <input type="text" placeholder="Enter the appoiment" id="name" required>
   
         <br>
-        <input type="checkbox"  id="Monday">Monday      
-        <input type="checkbox"  id="Tuesday">Tuesday      
-        <input type="checkbox"  id="Wednesday">Wednesday <br>
-        <input type="checkbox"  id="Thursday">Thursday      
-        <input type="checkbox"  id="Friday">Friday
+        <input type="checkbox"  id="MondayCheck">Monday      
+        <input type="checkbox"  id="TuesdayCheck">Tuesday      
+        <input type="checkbox"  id="WednesdayCheck">Wednesday <br>
+        <input type="checkbox"  id="ThursdayCheck">Thursday      
+        <input type="checkbox"  id="FridayCheck">Friday
         <br>
         Start: <input type="time" id="start">
         <br>
         End: <input type="time" id="end"  min="08:00" max="20:00" required />
         <br>
-        <button type="submit" class="btn" onclick="addAppoiment()">Add</button>
+        <button type="button" class="btn" onclick="addAppoiment()">Add</button>
         <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
     </form>
   </div>
 
-
-<table border="5" cellspacing="0" align="center">
-    <tr id="header">
-        <td align="center" height="50" width="100"><br>
-            <b>Time/Day</b></br>
-        </td>
-        <td align="center" height="50" width="100"><br>
-            <b>Monday</b></br>
-        </td>
-        <td align="center" height="50" width="100"><br>
-            <b>Tuesday</b></br>
-        </td>
-        <td align="center" height="50" width="100"><br>
-            <b>Wednesday</b></br>
-        </td>
-        <td align="center" height="50" width="100"><br>
-            <b>Thursday</b></br>
-        </td>
-        <td align="center" height="50" width="100"><br>
-            <b>Friday</b></br>
-        </td>
-    </tr>
-    <tr>
-        <td align="center" height="50" width="100">
-            <b>8:00</b>
-        </td>
-        <td align="center" height="50" width="100" rowspan="4">
-            <div class="free" style="--porcentage: 12.5%;"></div>
-            <div class="cont" align="center" style="--porcentage: 87.5%;">
-                Linear Optimization
-            </div>
-            <div class="free" style="--porcentage: 0%;"></div>
-        </td>
-        <td align="center" height="50" width="100"></td>
-        <td align="center" height="50" width="100" rowspan="2">
-            <div class="free" style="--porcentage: 25%;"></div>
-            <div class="cont" style="--porcentage: 75%;">
-                Hungarian Language
-            </div>
-            <div class="free" style="--porcentage: 0%;"></div>
-        </td>
-        <td align="center" height="50" width="100" rowspan="4">
-            <div class="free" style="--porcentage: 12.5%;"></div>
-            <div class="cont" style="--porcentage: 87.5%;">
-                Web Technologies
-            </div>
-            <div class="free" style="--porcentage: 0%;"></div>
-        </td>
-        <td align="center" height="50" width="100"></td>
-    </tr>
-    <tr>
-        <td align="center" height="50">
-            <b>9:00</b>
-        </td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-    </tr>
-        <td align="center" height="50">
-            <b>10:00</b>
-        </td>
-        <td align="center" height="50" rowspan="1">
-            <div class="free" style="--porcentage: 33%;"></div>
-            <div class="cont" align="center" style="--porcentage: 67%;">
-                Hungarian Language
-            </div>
-            <div class="free" style="--porcentage: 0%;"></div>
-        </td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-    <tr>
-        <td align="center" height="50">
-            <b>11:00</b>
-        </td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-    </tr>
-    <tr>
-        <td align="center" height="50">
-            <b>12:00</b>
-        </td>
-        <td align="center" height="50" rowspan="4">
-            <div class="free" style="--porcentage: 0%;"></div>
-            <div class="cont" style="--porcentage: 87.5%;">
-                Machine Learning
-            </div>
-            <div class="free" style="--porcentage: 12.5%;"></div>
-        </td>
-        <td align="center" height="50" rowspan="4">
-            <div class="free" style="--porcentage: 0%;"></div>
-            <div class="cont" style="--porcentage: 87.5%;">
-                Numerical Methods
-            </div>
-            <div class="free" style="--porcentage: 12.5%;"></div>
-        </td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-    </tr>
-    <tr>
-        <td align="center" height="50">
-            <b>13:00</b>
-        </td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-    </tr>
-    <tr>
-        <td align="center" height="50">
-            <b>14:00</b>
-        </td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-    </tr>
-    <tr>
-        <td align="center" height="50">
-            <b>15:00</b>
-        </td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50" rowspan="3" class="blue">High Performance Computing</td>
-        <td align="center" height="50"></td>
-    </tr>
-    <tr>
-        <td align="center" height="50">
-            <b>16:00</b>
-        </td>
-        <td align="center" height="50" rowspan="3" class="blue">Cloud Computing</td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-    </tr>
-    <tr>
-        <td align="center" height="50">
-            <b>17:00</b>
-        </td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-    </tr>
-    <tr>
-        <td align="center" height="50">
-            <b>18:00</b>
-        </td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-    </tr>
-    <tr>
-        <td align="center" height="50">
-            <b>19:00</b>
-        </td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-    </tr>
-    <tr>
-        <td align="center" height="50">
-            <b>20:00</b>
-        </td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-        <td align="center" height="50"></td>
-    </tr>
-</table>
+<div >
+    <!-- A button to open the popup form -->
+    <button class="open-button" onclick="openForm()">Add appoiment</button>
+    <table border="5" align="center" cellspacing="0">
+        <thead id="header">
+            <td align="center" height="50" width="100"><br>
+                <b>Time/Day</b></br>
+            </td>
+            <td align="center" height="50" width="100">
+                <br><b>Monday</b></br>
+            </td>
+            <td align="center" height="50" width="100"><br>
+                <b>Tuesday</b></br>
+            </td>
+            <td align="center" height="50" width="100"><br>
+                <b>Wednesday</b></br>
+            </td>
+            <td align="center" height="50" width="100"><br>
+                <b>Thursday</b></br>
+            </td>
+            <td align="center" height="50" width="100"><br>
+                <b>Friday</b></br>
+            </td>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="center" height="50">
+                    <b>8:00</b>
+                </td>
+                <td align="center" height="50" id="Monday" style="position: relative;"></td>
+                <td align="center" height="50" id="Tuesday" style="position: relative;"></td>
+                <td align="center" height="50" id="Wednesday" style="position: relative;"></td>
+                <td align="center" height="50" id="Thursday" style="position: relative;"></td>
+                <td align="center" height="50" id="Friday" style="position: relative;"></td>
+            </tr>
+            <tr>
+                <td align="center" height="50">
+                    <b>9:00</b>
+                </td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+            </tr>
+            <tr>
+                <td align="center" height="50">
+                    <b>10:00</b>
+                </td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+            </tr>
+            <tr>
+                <td align="center" height="50">
+                    <b>11:00</b>
+                </td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+            </tr>
+            <tr>
+                <td align="center" height="50">
+                    <b>12:00</b>
+                </td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+            </tr>
+            <tr>
+                <td align="center" height="50">
+                    <b>13:00</b>
+                </td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+            </tr>
+            <tr>
+                <td align="center" height="50">
+                    <b>14:00</b>
+                </td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+            </tr>
+            <tr>
+                <td align="center" height="50">
+                    <b>15:00</b>
+                </td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+            </tr>
+            <tr>
+                <td align="center" height="50">
+                    <b>16:00</b>
+                </td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+            </tr>
+            <tr>
+                <td align="center" height="50">
+                    <b>17:00</b>
+                </td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+            </tr>
+            <tr>
+                <td align="center" height="50">
+                    <b>18:00</b>
+                </td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+            </tr>
+            <tr>
+                <td align="center" height="50">
+                    <b>19:00</b>
+                </td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+            </tr>
+            <tr>
+                <td align="center" height="50">
+                    <b>20:00</b>
+                </td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+                <td align="center" height="50"></td>
+            </tr>
+        </tbody>
+        
+    </table>
+    
+</div>
 
 </body>
 </html>
