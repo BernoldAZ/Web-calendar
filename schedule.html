@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="schedule.css">
   <script src="schedule.js"></script>
 </head>
-<body>
+<body onbeforeunload="return warning()" onkeypress="openForm()">
 
 <h1 align="center" id="demo">
     My Schedule
@@ -15,20 +15,27 @@
     <form  class="form-container">
       <h1>New appoiment</h1>
   
-        <label for="name"><b>Appoiment name</b></label>
+        <label ><b>Appoiment name</b></label>
         <input type="text" placeholder="Enter the appoiment" id="name" required>
   
         <br>
-        <input type="checkbox"  id="MondayCheck">Monday      
+        <label ><b>Appoiment day</b></label>
+        <br>
+        <input type="checkbox"  id="MondayCheck" >Monday      
         <input type="checkbox"  id="TuesdayCheck">Tuesday      
         <input type="checkbox"  id="WednesdayCheck">Wednesday <br>
         <input type="checkbox"  id="ThursdayCheck">Thursday      
         <input type="checkbox"  id="FridayCheck">Friday
         <br>
-        Start: <input type="time" id="start">
-        <br>
-        End: <input type="time" id="end"  min="08:00" max="20:00" required />
-        <br>
+        <div class="times">
+            <br>
+            <label ><b>Start:</b></label>
+            <input type="time" id="start" class="larger">
+        </div>
+        <div class="times">
+            <label ><b>End:</b></label>
+            <input type="time" id="end"  min="08:00" max="20:00" required class="larger"/>
+        </div>
         <button type="button" class="btn" onclick="addAppoiment()">Add</button>
         <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
     </form>
@@ -36,7 +43,7 @@
 
 <div >
     <!-- A button to open the popup form -->
-    <button class="open-button" onclick="openForm()">Add appoiment</button>
+    <button class="open-button" onclick="openForm()" ondblclick="message()" onmouseover="newPointer(this)" onmouseout="oldPointer(this)">Add appoiment</button>
     <table border="5" align="center" cellspacing="0">
         <thead id="header">
             <td align="center" height="50" width="100"><br>

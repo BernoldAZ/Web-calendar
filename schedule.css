@@ -4,6 +4,16 @@
 
 }
 
+input.larger {
+  width: 50%;
+  height: 30px;
+}
+
+.times{
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
 .dayCol {
   height: 100%;
 }
@@ -16,7 +26,6 @@
   color: white;
   padding: 1% 5%;
   border: none;
-  cursor: pointer;
   opacity: 0.8;
   position: fixed;
   bottom: 1%;
